@@ -1,0 +1,16 @@
+﻿cli,modulo,funcion,ruta,existe_modulo,origen
+bean-bake,beancount.scripts.bake,main,beancount/scripts/bake.py,si,setup.py
+bean-check,beancount.scripts.check,main,beancount/scripts/check.py,si,setup.py
+bean-doctor,beancount.scripts.doctor,main,beancount/scripts/doctor.py,si,setup.py
+bean-example,beancount.scripts.example,main,beancount/scripts/example.py,si,setup.py
+bean-extract,beancount.ingest.scripts_utils,extract_main,beancount/ingest/scripts_utils.py,si,setup.py
+bean-file,beancount.ingest.scripts_utils,file_main,beancount/ingest/scripts_utils.py,si,setup.py
+bean-format,beancount.scripts.format,main,beancount/scripts/format.py,si,setup.py
+bean-identify,beancount.ingest.scripts_utils,identify_main,beancount/ingest/scripts_utils.py,si,setup.py
+bean-price,beancount.prices.price,main,beancount/prices/price.py,si,setup.py
+bean-query,beancount.query.shell,main,beancount/query/shell.py,si,setup.py
+bean-report,beancount.reports.report,main,beancount/reports/report.py,si,setup.py
+bean-sql,beancount.scripts.sql,main,beancount/scripts/sql.py,si,setup.py
+bean-web,beancount.web.web,main,beancount/web/web.py,si,setup.py
+treeify,beancount.tools.treeify,main,beancount/tools/treeify.py,si,setup.py
+upload-to-sheets,beancount.tools.sheets_upload,main,beancount/tools/sheets_upload.py,si,setup.py

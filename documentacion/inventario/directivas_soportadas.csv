@@ -1,0 +1,20 @@
+﻿directiva,palabra_clave,token,lexer_l,regla_grammar_y,metodo_builder,clase,archivo_clase
+transaction,"txn o una bandera (*, !, ...)",TXN,beancount/parser/lexer.l:246,beancount/parser/grammar.y:397,beancount/parser/grammar.py:1025,Transaction,beancount/core/data.py:239
+open,open,OPEN,beancount/parser/lexer.l:248,beancount/parser/grammar.y:571,beancount/parser/grammar.py:630,Open,beancount/core/data.py:93
+close,close,CLOSE,beancount/parser/lexer.l:249,beancount/parser/grammar.y:586,beancount/parser/grammar.py:665,Close,beancount/core/data.py:118
+commodity,commodity,COMMODITY,beancount/parser/lexer.l:250,beancount/parser/grammar.y:593,beancount/parser/grammar.py:680,Commodity,beancount/core/data.py:133
+pad,pad,PAD,beancount/parser/lexer.l:251,beancount/parser/grammar.y:600,beancount/parser/grammar.py:695,Pad,beancount/core/data.py:155
+balance,balance,BALANCE,beancount/parser/lexer.l:247,beancount/parser/grammar.y:607,beancount/parser/grammar.py:711,Balance,beancount/core/data.py:177
+note,note,NOTE,beancount/parser/lexer.l:256,beancount/parser/grammar.y:742,beancount/parser/grammar.py:781,Note,beancount/core/data.py:287
+event,event,EVENT,beancount/parser/lexer.l:252,beancount/parser/grammar.y:728,beancount/parser/grammar.py:733,Event,beancount/core/data.py:313
+query,query,QUERY,beancount/parser/lexer.l:253,beancount/parser/grammar.y:735,beancount/parser/grammar.py:749,Query,beancount/core/data.py:350
+price,price,PRICE,beancount/parser/lexer.l:255,beancount/parser/grammar.y:721,beancount/parser/grammar.py:765,Price,beancount/core/data.py:372
+document,document,DOCUMENT,beancount/parser/lexer.l:257,beancount/parser/grammar.y:751,beancount/parser/grammar.py:799,Document,beancount/core/data.py:397
+custom,custom,CUSTOM,beancount/parser/lexer.l:254,beancount/parser/grammar.y:806,beancount/parser/grammar.py:823,Custom,beancount/core/data.py:427
+option,option,OPTION,beancount/parser/lexer.l:262,beancount/parser/grammar.y:827,beancount/parser/grammar.py:367,"(sin clase: afecta al analizador, no genera entrada)",
+include,include,INCLUDE,beancount/parser/lexer.l:264,beancount/parser/grammar.y:834,beancount/parser/grammar.py:439,"(sin clase: afecta al analizador, no genera entrada)",
+plugin,plugin,PLUGIN,beancount/parser/lexer.l:263,beancount/parser/grammar.y:841,beancount/parser/grammar.py:449,"(sin clase: afecta al analizador, no genera entrada)",
+pushtag,pushtag,PUSHTAG,beancount/parser/lexer.l:258,beancount/parser/grammar.y:540,beancount/parser/grammar.py:307,"(sin clase: afecta al analizador, no genera entrada)",
+poptag,poptag,POPTAG,beancount/parser/lexer.l:259,beancount/parser/grammar.y:547,beancount/parser/grammar.py:319,"(sin clase: afecta al analizador, no genera entrada)",
+pushmeta,pushmeta,PUSHMETA,beancount/parser/lexer.l:260,beancount/parser/grammar.y:554,beancount/parser/grammar.py:335,"(sin clase: afecta al analizador, no genera entrada)",
+popmeta,popmeta,POPMETA,beancount/parser/lexer.l:261,beancount/parser/grammar.y:564,beancount/parser/grammar.py:346,"(sin clase: afecta al analizador, no genera entrada)",

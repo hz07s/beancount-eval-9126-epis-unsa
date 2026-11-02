@@ -1,0 +1,11 @@
+.venv-*/
+venv-*/
+.tools/
+beancount-src/
+examples/
+logs/
+work/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.picklecache

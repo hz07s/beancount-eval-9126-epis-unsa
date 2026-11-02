@@ -1,0 +1,6 @@
+﻿cli,modulo,funcion,ruta,existe_modulo,origen
+bean-check,beancount.scripts.check,main,beancount/scripts/check.py,si,pyproject.toml
+bean-doctor,beancount.scripts.doctor,main,beancount/scripts/doctor.py,si,pyproject.toml
+bean-example,beancount.scripts.example,main,beancount/scripts/example.py,si,pyproject.toml
+bean-format,beancount.scripts.format,main,beancount/scripts/format.py,si,pyproject.toml
+treeify,beancount.tools.treeify,main,beancount/tools/treeify.py,si,pyproject.toml

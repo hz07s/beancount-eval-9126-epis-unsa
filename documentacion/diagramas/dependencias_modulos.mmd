@@ -1,0 +1,36 @@
+%% Generado por scripts/generar_dependencias.py. No editar a mano.
+%% Etiqueta de cada flecha: número de imports entre módulos que no son de prueba.
+graph LR
+    core["core"]
+    ops["ops"]
+    parser["parser"]
+    plugins["plugins"]
+    projects["projects"]
+    scripts["scripts"]
+    tools["tools"]
+    utils["utils"]
+    raiz["beancount (loader, api)"]
+    core -->|4| utils
+    ops -->|37| core
+    ops -->|1| parser
+    ops -->|1| raiz
+    ops -->|3| utils
+    parser -->|51| core
+    parser -->|2| raiz
+    parser -->|1| utils
+    plugins -->|40| core
+    plugins -->|2| parser
+    plugins -->|2| raiz
+    projects -->|6| core
+    projects -->|1| ops
+    projects -->|1| parser
+    projects -->|1| raiz
+    raiz -->|13| core
+    raiz -->|1| ops
+    raiz -->|6| parser
+    raiz -->|2| utils
+    scripts -->|24| core
+    scripts -->|2| ops
+    scripts -->|12| parser
+    scripts -->|3| raiz
+    scripts -->|2| utils

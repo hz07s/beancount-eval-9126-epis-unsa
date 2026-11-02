@@ -1,0 +1,10 @@
+﻿paquete,modulos,archivos_test,tests_estaticos,loc_producto,loc_test
+beancount,3,1,32,1042,740
+beancount.core,17,16,283,5616,5019
+beancount.ops,10,9,131,2371,4074
+beancount.parser,13,12,476,5295,8950
+beancount.plugins,19,18,67,1562,1906
+beancount.projects,2,1,1,429,24
+beancount.scripts,7,7,32,2982,837
+beancount.tools,2,1,20,430,610
+beancount.utils,12,11,52,1717,1046

@@ -1,0 +1,19 @@
+﻿archivo,objeto,tipo,motivo
+beancount/parser/booking_full_test.py:2706,TestBookCrossover,skip,Crossing is not supported yet. Handle this in the v3 C++ rewrite. {d3cbd78f1029}.
+beancount/parser/booking_full_test.py:2737,_TestBookAmbiguousAVERAGE,skip,Booking.AVERAGE is disabled.
+beancount/parser/booking_full_test.py:2134,test_has_self_reductions__total_replacement,skip,Disabled until we can support total self-redux with replacement
+beancount/parser/booking_full_test.py:2178,test_reduce__augment_and_reduce_with_empty_balance__matching_pos,skip,Disabled until self-reduction is supported
+beancount/parser/booking_full_test.py:2195,test_reduce__augment_and_reduce_with_empty_balance__matching_neg,skip,Disabled until self-reduction is supported
+beancount/parser/booking_full_test.py:2212,test_reduce__augment_and_reduce_with_non_empty_balance,skip,Disabled until self-reduction is supported
+beancount/parser/booking_full_test.py:2939,test_ambiguous__AVERAGE__mixed_currencies__unambi_cost_ccy__merging,skip,FIXME enable this when supporting explicit cost reductions
+beancount/parser/booking_full_test.py:2964,test_ambiguous__AVERAGE__mixed_currencies__unambi_cost__merging,skip,FIXME enable this when supporting explicit cost reductions
+beancount/parser/parser_test.py:191,TestReferenceCounting,skipUnless,requires sys.getrefcount()
+beancount/parser/parser_test.py:52,test_parse_doc__errors,skipIf,Skipping test in Bazel
+beancount/parser/parser_test.py:53,test_parse_doc__errors,expectedFailure,
+beancount/parser/parser_test.py:62,test_parse_doc__noerrors,skipIf,Skipping test in Bazel
+beancount/parser/parser_test.py:63,test_parse_doc__noerrors,expectedFailure,
+beancount/scripts/format_test.py:244,test_arithmetic_expressions,skip,Eventually we will want to support arithmetic expressions. It will require to invoke the expression parser because expressions are not guaranteed to be surrounded by matching parentheses.
+beancount/utils/encryption_test.py:148,test_read_encrypted_file,skipIf,gpg is not installed
+beancount/utils/test_utils_test.py:136,decorator_no_skip,skipIfRaises,
+beancount/utils/test_utils_test.py:142,decorator_skip,skipIfRaises,
+beancount/utils/test_utils_test.py:150,decorator_skip,skipIfRaises,

@@ -1,0 +1,34 @@
+%% Recorrido de bean-check sobre un archivo. Ver 05_flujo_de_ejecucion.md.
+flowchart TD
+    inicio["bean-check archivo.beancount<br/>scripts/check.py: main"]
+    load["loader.load_file"]
+    cache{"¿Caché pickle vigente?"}
+    hit["Devuelve el resultado guardado"]
+    recursive["loader._parse_recursive<br/>procesa el archivo y sus include"]
+    parse["parser.parse_file<br/>lexer y gramática en C llaman al Builder"]
+    finalize["Builder.finalize<br/>(entries, errors, options_map)"]
+    sort["Ordena por data.entry_sortkey"]
+    book["booking.book<br/>lotes e interpolación"]
+    transform["loader.run_transformations<br/>documents, plugins del usuario, auto, pad, balance"]
+    validate["validation.validate<br/>7 básicas + validate_data_types"]
+    errores["printer.print_errors escribe en stderr"]
+    salida{"¿Hay errores?"}
+    cero["Código de salida 0"]
+    uno["Código de salida 1"]
+
+    inicio --> load
+    load --> cache
+    cache -->|sí| hit
+    cache -->|no| recursive
+    recursive --> parse
+    parse --> finalize
+    finalize -->|hay include pendientes| recursive
+    finalize --> sort
+    sort --> book
+    book --> transform
+    transform --> validate
+    validate --> errores
+    hit --> errores
+    errores --> salida
+    salida -->|no| cero
+    salida -->|sí| uno

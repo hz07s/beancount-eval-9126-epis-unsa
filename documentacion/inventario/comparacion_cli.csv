@@ -1,0 +1,16 @@
+﻿cli,en_2_3_6,en_3_2_3,estado
+bean-bake,beancount.scripts.bake,,eliminado
+bean-check,beancount.scripts.check,beancount.scripts.check,conservado
+bean-doctor,beancount.scripts.doctor,beancount.scripts.doctor,conservado
+bean-example,beancount.scripts.example,beancount.scripts.example,conservado
+bean-extract,beancount.ingest.scripts_utils,,eliminado
+bean-file,beancount.ingest.scripts_utils,,eliminado
+bean-format,beancount.scripts.format,beancount.scripts.format,conservado
+bean-identify,beancount.ingest.scripts_utils,,eliminado
+bean-price,beancount.prices.price,,eliminado
+bean-query,beancount.query.shell,,eliminado
+bean-report,beancount.reports.report,,eliminado
+bean-sql,beancount.scripts.sql,,eliminado
+bean-web,beancount.web.web,,eliminado
+treeify,beancount.tools.treeify,beancount.tools.treeify,conservado
+upload-to-sheets,beancount.tools.sheets_upload,,eliminado

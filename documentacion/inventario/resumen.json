@@ -1,0 +1,35 @@
+{
+  "archivos_py": 161,
+  "modulos_producto": 85,
+  "archivos_test": 76,
+  "loc_producto": 21444,
+  "loc_test": 23206,
+  "tests_estaticos": 1094,
+  "cli": 5,
+  "plugins": 18,
+  "errores_ast": 0,
+  "omisiones": 18,
+  "modulos_sin_test": 1,
+  "comparacion": {
+    "modulos_conservados": 84,
+    "modulos_nuevos": 1,
+    "modulos_eliminados": 84,
+    "cli_conservados": 5,
+    "cli_nuevos": 0,
+    "cli_eliminados": 10,
+    "api_conservada": 442,
+    "api_nueva": 39,
+    "api_eliminada": 652,
+    "api_total_2_3_6": 1094,
+    "api_total_3_2_3": 481
+  },
+  "v2_3_6": {
+    "archivos_py": 315,
+    "modulos_producto": 168,
+    "archivos_test": 147,
+    "loc_producto": 40159,
+    "loc_test": 33416,
+    "tests_estaticos": 1720,
+    "cli": 15
+  }
+}

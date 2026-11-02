@@ -1,0 +1,12 @@
+beanquery==0.2.0
+click==8.5.0
+colorama==0.4.6
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+python-dateutil==4.0.0
+regex==2026.9.29
+TatSu-LTS==5.16.0
+tzdata==2026.6

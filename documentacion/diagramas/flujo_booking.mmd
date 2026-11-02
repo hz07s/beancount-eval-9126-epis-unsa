@@ -1,0 +1,35 @@
+%% Algoritmo de booking_full._book para cada transacción. Ver 05_flujo_de_ejecucion.md.
+flowchart TD
+    entrada["Transacción incompleta<br/>del analizador"]
+    categoriza["categorize_by_currency<br/>agrupa postings por moneda"]
+    errorcat{"¿Error de categorización?"}
+    descarta["Registra el error y omite la transacción"]
+    reemplaza["replace_currencies"]
+    tolerancias["interpolate.infer_tolerances"]
+    grupo["Para cada grupo de moneda"]
+    reduce["book_reductions<br/>busca lotes en el inventario previo"]
+    metodo["booking_method.handle_ambiguous_matches<br/>STRICT, FIFO, LIFO, HIFO, NONE..."]
+    errorred{"¿Error de reducción?"}
+    saltagrupo["Registra el error y omite el grupo"]
+    interpola["interpolate_group<br/>calcula el número que falta"]
+    sustituye["Sustituye los postings por los completos"]
+    acumula["Actualiza el inventario de cada cuenta"]
+    final["Transacción completa"]
+    verifica["booking.validate_missing_eliminated"]
+
+    entrada --> categoriza
+    categoriza --> errorcat
+    errorcat -->|sí| descarta
+    errorcat -->|no| reemplaza
+    reemplaza --> tolerancias
+    tolerancias --> grupo
+    grupo --> reduce
+    reduce --> metodo
+    metodo --> errorred
+    errorred -->|sí| saltagrupo
+    errorred -->|no| interpola
+    interpola --> sustituye
+    saltagrupo --> sustituye
+    sustituye --> acumula
+    acumula --> final
+    final --> verifica

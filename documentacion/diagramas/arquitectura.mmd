@@ -1,0 +1,44 @@
+%% Arquitectura por capas de Beancount v3.2.3. Ver 02_arquitectura.md para las citas.
+flowchart TD
+    usuario["Libro contable en texto (.beancount)"]
+
+    subgraph C3["C3 - Interfaz de línea de comandos"]
+        check["bean-check<br/>scripts/check.py"]
+        doctor["bean-doctor<br/>scripts/doctor.py"]
+        example["bean-example<br/>scripts/example.py"]
+        format["bean-format<br/>scripts/format.py"]
+        treeify["treeify<br/>tools/treeify.py"]
+    end
+
+    subgraph C1["C1 - Analizador y cargador"]
+        loader["loader.py<br/>orquesta todo el proceso"]
+        parser["parser/parser.py<br/>fachada del analizador"]
+        cext["_parser (extensión C)<br/>lexer.l + grammar.y"]
+        builder["parser/grammar.py<br/>Builder: crea las directivas"]
+    end
+
+    subgraph C2["C2 - Núcleo contable"]
+        booking["parser/booking*.py<br/>asignación de lotes e interpolación"]
+        plugins["plugins/ + ops/pad + ops/balance + ops/documents<br/>transformaciones"]
+        validation["ops/validation.py<br/>validaciones finales"]
+        core["core/<br/>data, amount, position, inventory..."]
+    end
+
+    utils["utils/<br/>soporte transversal"]
+
+    usuario --> check
+    usuario --> doctor
+    usuario --> format
+    check --> loader
+    doctor --> loader
+    loader --> parser
+    parser --> cext
+    cext --> builder
+    loader --> booking
+    loader --> plugins
+    loader --> validation
+    builder --> core
+    booking --> core
+    plugins --> core
+    validation --> core
+    loader --> utils
